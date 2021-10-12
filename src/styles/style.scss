@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+.all {
+  background: #01030d;
+}
+
+.main {
+  background-color: #d0cde1;
+  max-width: 100vw;
+  height: 90vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+  position: relative;
+
+  .img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // width: 36vw;
+    // height: 80vh;
+    padding-top: 20vh;
+
+    button {
+      z-index: 5;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 28px 40px;
+      background-color: #3542d4;
+      font-size: 2rem;
+      color: whitesmoke;
+      font-weight: 700;
+    }
+    button:hover {
+      background-color: #4753d6;
+      transition: all 0.5s;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    margin: 0 15vw;
+    padding-top: 8vh;
+    justify-content: space-between;
+    .icon {
+      display: flex;
+      align-items: center;
+      font-size: 3.5rem;
+      .logo {
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        background-size: contain;
+        background-image: url("./images/logo.svg");
+        background-repeat: no-repeat;
+      }
+      .text {
+        margin-left: 20px;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+    }
+
+    .social-media-container {
+      display: flex;
+
+      .social_media {
+        display: flex;
+        border: 1px solid #ffffff;
+        margin-right: 1vw;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        color: #01030d;
+        width: 44px;
+        height: 44px;
+        position: relative;
+      }
+      .social_media:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: bottom center;
+        background: #ffffff;
+        border: 0px;
+        z-index: -1;
+        transition: transform 0.3s;
+      }
+
+      .social_media:hover::after {
+        transform: scaleY(1);
+      }
+
+      .wallet {
+        display: inline-block;
+        border: 1px solid black;
+        margin-right: 1vw;
+        padding: 1.5vh;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: whitesmoke;
+        background: #000;
+      }
+      .wallet:hover {
+        background-color: #4753d6;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+.sec-page {
+  color: white;
+  padding-top: 20vh;
+  max-width: 100vw;
+  height: max-content;
+  display: flex;
+  flex-wrap: no-wrap;
+  position: relative;
+  .mr-rt {
+    width: 200px;
+    flex-shrink: 10;
+  }
+  .description {
+    width: 44rem;
+    padding-top: 10vh;
+    margin-right: 0vw;
+    .head-num {
+      font-size: 4rem;
+      background: -webkit-linear-gradient(#a42756, #e74f84);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      margin-bottom: 1vh;
+    }
+    .head-desc {
+      font-size: 3.8rem;
+      margin-bottom: 5vh;
+      font-weight: bold;
+    }
+    .rest {
+      font-size: 1.9rem;
+      line-height: 2.5rem;
+      color: #666478;
+    }
+  }
+  .image {
+    background-image: url("./images/Image\ from\ iOS\ \(1\).jpg");
+    display: block;
+    width: 44rem;
+    margin-left: 8vw;
+    height: 44rem;
+    padding: 5vw;
+    background-color: #3542d4;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.img-slider {
+}
+
+@media only screen and (max-width: 1000px) {
+  .sec-page {
+    color: white;
+    padding-top: 25vh;
+    max-width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .mr-rt {
+      width: 0;
+      flex-shrink: 10;
+    }
+    .description {
+      padding-left: 3vw;
+      width: 44rem;
+      padding-top: 10vh;
+      margin-right: 8vw;
+      .head-num {
+        font-size: 4rem;
+        background: -webkit-linear-gradient(#a42756, #e74f84);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        margin-bottom: 1vh;
+      }
+      .head-desc {
+        font-size: 4.8rem;
+        margin-bottom: 5vh;
+        font-weight: bold;
+      }
+      .rest {
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+        color: #666478;
+      }
+    }
+    .image {
+      background-image: url("./images/Image\ from\ iOS\ \(1\).jpg");
+      display: flex;
+      width: 44rem;
+      height: 44rem;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+      margin-bottom: 5vh;
+      margin-top: 8vh;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 474px) {
+  .main {
+    .navbar {
+      background-color: #a42756;
+      margin: 0 2px;
+
+      .icon {
+        .logo {
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
