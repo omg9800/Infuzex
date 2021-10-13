@@ -48,19 +48,26 @@ html {
 
   .navbar {
     display: flex;
-    margin: 0 15vw;
+    margin: 0 10vw;
     padding-top: 8vh;
     justify-content: space-between;
+    align-items: center;
     .icon {
       display: flex;
       align-items: center;
       font-size: 3.5rem;
+
       .logo {
-        display: inline-block;
+        display: flex;
+        margin-right: 30px;
+        align-items: flex-start;
         width: 60px;
         height: 30px;
+        // background-color: #3542d4;
         background-size: contain;
-        background-image: url("./images/logo.svg");
+        background-position: center;
+        transform: scale(4);
+        background-image: url("./images/Black\ trans\ \(1\)\ \(1\).png");
         background-repeat: no-repeat;
       }
       .text {
@@ -167,7 +174,6 @@ html {
     margin-left: 8vw;
     height: 44rem;
     padding: 5vw;
-    background-color: #3542d4;
     margin-bottom: 5vh;
     margin-top: 2vh;
     background-size: contain;
@@ -252,3 +258,32 @@ html {
     }
   }
 }
+
+.corousel {
+  background-color: #01030d;
+  width: 100%;
+  height: 100%;
+  .item {
+    padding-top: 20vh;
+    padding-bottom: 13vh;
+    display: flex;
+    justify-content: center;
+    img {
+      display: flex;
+      height: 30vw;
+      width: 27vw;
+      background-size: contain;
+    }
+  }
+}
+
+// .swiper {
+//   background-color: #a42756;
+//   height: 100vh;
+//   width: 100vw;
+
+//   img {
+//     display: flex;
+//     background-size: contain;
+//   }
+// }

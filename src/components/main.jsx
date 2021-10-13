@@ -2,6 +2,7 @@ import React from "react";
 import headerImaage from "../styles/images/header-img.png";
 import { FaHeart, FaDiscord } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
+
 class Main extends React.Component {
   render() {
     return (
@@ -57,7 +58,3 @@ class Main extends React.Component {
 }
 
 export default Main;
-
-//  <Button variant="text" size="large" startIcon={<AccessAlarm />}>
-//    Text
-//  </Button>;
